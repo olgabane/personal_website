@@ -3,34 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <!-- Title in Browser Tab-->
+  <title>Olga Bane</title>
+  <!-- Bootstrap CSS link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+  <!-- favicon -->
+  <link rel="icon" href="icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <style>
+    /* Custom styles */
+    body {
+      background-color: #ffffff;
+      font-family: Tahoma, sans-serif;
+      color: black
+    }
+
+    .container {
+        width: 80%;
+    } 
+
+    .col-sm {
+        text-align: center;
+    }
+
+    .title {
+      font-family: 'WindSong', cursive;
+      font-size:8vw; /* Font size will scale with the width of the viewport */
+      text-align: center;
+      margin-top: 10px;
+      max-width: 60%; 
+      margin:0 auto; /*so that text is aligned when max width set */
+    }
+
+    /*
+    .welcome-background {
+        background-color: #000000; 
+        width: 80%; // Set width to 80% of the viewport width; 80vw also works
+        margin: auto; // Center horizontally
+        display: flex; // Use flexbox for centering
+        justify-content: center; // Center horizontally
+        border-radius: 8px; // Optional: Add rounded corners
+    }
+
+    .welcome-text {
+        font-family: Montserrat;
+        font-size: clamp(14px, 1.8vw, 24px); // Scale with width, but cap min and max font size
+        text-align: justify;
+        margin-top: 10px;
+        max-width: 80%; 
+        margin: 0 auto; // So that text is aligned when max width set
+        color: #ffffff;
+    }
+    */
+
+    .email-text {
+      font-family: Montserrat;
+      font-size: clamp(14px, 1.8vw, 24px);
+      text-align: center;
+      margin-top: 10px;
+      max-width: 60%; 
+      margin:0 auto; /*so that text is aligned when max width set */
+    }
+
+    .card {
+        width: 100%;
+        border: 3px solid #000000;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        margin: 16px auto;
+        font-family: Arial, sans-serif;
+        background-color: black;
+    }
+
+    .card img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Ensures the image is always square */
+        object-fit: cover; /* Ensures the image scales nicely within the square */
+    }
+
+    .card-text {
+        padding: 16px;
+        font-size: clamp(18px, 1.8vw, 24px);
+        color: #ffffff;
+        background-color: #000000;
+    }
+
+    .card-text-small {
+        padding: 8px;
+        font-size: clamp(10px, 1.8vw, 12px);
+        color: #ffffff;
+        background-color: #000000;
+    }
+
+    .custom-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Art Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="art.html">Art</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Cursive Name -->
+    <div class="pt-5 pb-5">
+        <p class="title pb-4">Olga Bane</p>
+        <!-- <div class="welcome-background py-2">
+            <p class="welcome-text">
+                Hi there, and welcome! Here I chart my personal pursuits in art, 
+                as well as my professional pursuits in molecular biology 
+                and machine learning. Whether you're here for the art, the science, or the algorithms, 
+                I am glad you stopped by. Take a look around and feel free to connect!
+            </p>
+        </div> -->
     </div>
-  </nav>
-  
-  <div class="container mt-5">
-    <h1>About Me</h1>
-    <p>Hello! Welcome to my art portfolio. I’m passionate about creating beautiful works of art and sharing them with the world. Explore my work on the Art page!</p>
-  </div>
 
+    <!-- Grid Container -->
+    <div class="container">
+        <div class="row">
+
+            <!-- About Card-->
+            <div class="col-md-3"> <!-- col-md-4 ensures that columns stack vertically for medium size screens and below -->
+                <div class="card">
+                    <img src="images/about_image.jpg" alt="About Image">
+                    <div class="card-text">
+                        About
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Card-->
+            <div class="col-md-3"> 
+                <a href="art/" class="custom-link">
+                    <div class="card">
+                        <img src="images/art_image.jpg" alt="Art Image">
+                        <div class="card-text">
+                            Art
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Code Card-->
+            <div class="col-md-3">
+                <a href="code" class="custom-link">
+                    <div class="card">
+                        <img src="images/code_image.jpg" alt="Code Image">
+                        <div class="card-text">
+                            Code
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Science Card-->
+            <div class="col-md-3">
+                <a href="science" class="custom-link">
+                    <div class="card">
+                        <img src="images/science_image.jpg" alt="Science Image">
+                        <div class="card-text">
+                            Science
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div>
+        <p class="email-text py-5">
+            the.olga.bane[at]gmail[dot]com 
+        </p>
+    </div>
+
+
+
+  <!-- Bootstrap JS link (Optional for interactive elements like modals) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+<!-- about, art, science, code, origami, thoughts-->

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css"> <!-- Assuming you have a styles.css file for common styles -->
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <!-- favicon -->
+    <!--TODO: update favicon to art image-->
+    <link rel="icon" href="../icons/favicon.ico" sizes="any">
+    <link rel="icon" type="../image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Tahoma, sans-serif;
+            color: black;
+        }
+        .section img {
+            width: 80%; /* Adjust the percentage as needed */
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .section p {
+            /* like card-text in index.html */
+            padding: 16px;
+            font-family: Montserrat;
+            font-size: clamp(18px, 1.8vw, 24px);
+            text-align: center;
+        }
+        .title {
+            font-family: 'WindSong', cursive;
+            font-size: 6vw; /* Font size will scale with the width of the viewport */
+            text-align: center;
+            margin-top: 10px;
+            max-width: 60%; 
+            margin: 0 auto; /* text aligned when max width set */
+        }
+
+        .email-text {
+            font-family: Montserrat;
+            font-size: clamp(14px, 1.8vw, 24px);
+            text-align: center;
+            margin-top: 10px;
+            max-width: 60%; 
+            margin:0 auto; /*text aligned when max width set */
+            }
+
+        .image-border {
+            border: 1px solid black; 
+        }
+
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .home-icon-image {
+            width: 60px;
+            height: 60px; 
+}
+    </style>
+</head>
+<body>
+    <!-- Home Icon -->
+    <div class="home-icon">
+        <a href="../index.html">
+            <img src="../icons/home_icon.png" alt="Home" class="home-icon-image">
+        </a>
+    </div>
+
+    <!-- Cursive Name -->
+    <div class="pt-5 pb-5 text-center">
+        <p class="title">Olga Bane Art</p>
+    </div>
+    <!-- Art Sections -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 section">
+                <a href="colored-pencil/">
+                    <p class="text-center">Colored Pencil</p>
+                    <img src="images/colored_pencil_1000px.png" alt="Colored Pencil Image" class="img-fluid mx-auto image-border">
+                </a>
+            </div>
+            <div class="col-md-4 section">
+                <a href="watercolor/">
+                    <p class="text-center">Watercolor</p>
+                    <img src="images/paint_brush_1000px.png" alt="Watercolor Image" class="img-fluid mx-auto image-border">
+                </a>
+            </div>
+            <div class="col-md-4 section">
+                <a href="pen/">
+                    <p class="text-center">Pen</p>
+                    <img src="images/pen_1000px.png" alt="Pen Image" class="img-fluid mx-auto image-border">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Get in touch -->
+    <div>
+        <p class="email-text py-5">
+            Looking for high resolution prints? Get in touch! the.olga.bane[at]gmail[dot]com
+        </p>
+    </div>
+    <!--remove libraries not currently used -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>

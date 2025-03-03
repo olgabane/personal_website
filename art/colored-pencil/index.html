@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Pencil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles.css"> <!-- Assuming you have a styles.css file for common styles -->
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Tahoma, sans-serif;
+            color: black;
+        }
+        .section {
+            text-align: center;
+            margin: 40px 0; /* More space between sections */
+        }
+        .section img {
+            width: 50%; /* Adjust the percentage as needed */
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black; /* Thin black border */
+            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+        }
+        .section p {
+            padding: 16px;
+            font-family: Montserrat;
+            font-size: clamp(12px, 1.8vw, 16px);
+            text-align: center;
+        }
+        .title-sub {
+            padding: 16px;
+            font-family: Montserrat;
+            font-size: clamp(24px, 1.8vw, 30px);
+            text-align: center;
+        }
+        .caption {
+            font-family: Montserrat;
+            font-size: clamp(14px, 1.8vw, 24px);
+            text-align: left !important; /* Override center alignment */
+            margin-top: 10px;
+            width: 50%; /* Match the width of the image */
+            object-fit: cover;
+        }
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .home-icon-image {
+            width: 60px; 
+            height: 60px; 
+        }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%; /* Adjust the max-width as needed */
+            max-height: 90%; /* Adjust the max-height as needed */
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Icon -->
+    <div class="home-icon">
+        <a href="../../index.html">
+            <img src="../../icons/home_icon.png" alt="Home" class="home-icon-image">
+        </a>
+    </div>
+    <!-- Title: Colored Pencil -->
+    <div>
+        <p class="title-sub">Colored Pencil</p>
+    </div>
+    <!-- Image Sections -->
+    <div class="container">
+        <div class="section">
+            <img src="images/timessquare_1000px.png" alt="Colored Pencil Image 1" class="img-fluid mx-auto" onclick="openModal(this)">
+            <p class="caption">
+                Times Square<br>
+                Colored pencil on black paper<br>
+                [Size]<br>
+                [Year]
+            </p>
+        </div>
+        <div class="section">
+            <img src="images/rattlesnakeplant_1000px.png" alt="Colored Pencil Image 2" class="img-fluid mx-auto" onclick="openModal(this)">
+            <p class="caption">
+                Rattlesnake Plant<br>
+                Colored pencil on black paper<br> 
+                [Size]<br>
+                [Year]
+            </p>
+        </div>
+        <div class="section">
+            <img src="images/grape_1000px.png" alt="Colored Pencil Image 3" class="img-fluid mx-auto" onclick="openModal(this)">
+            <p class="caption">
+                Grapes in Water<br>
+                Colored pencil on black paper<br> 
+                [Size]<br>
+                [Year]
+            </p>
+        </div>
+        <div class="section">
+            <img src="images/glasses_1000px.png" alt="Colored Pencil Image 4" class="img-fluid mx-auto" onclick="openModal(this)">
+            <p class="caption">
+                Glasses<br>
+                Colored pencil on black paper<br> 
+                [Size]<br>
+                [Year]
+            </p>
+        </div>
+        <div class="section">
+            <img src="images/winebottle_1000px.png" alt="Colored Pencil Image 5" class="img-fluid mx-auto" onclick="openModal(this)">
+            <p class="caption">
+                Winebottle and Glass<br>
+                Colored pencil on black paper<br> 
+                [Size]<br>
+                [Year]
+            </p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
